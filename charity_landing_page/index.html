@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water - Interactive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #1F5C68;
+      color: white;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      min-height: 100vh;
+    }
+    .text-content {
+      flex: 1 1 500px;
+    }
+    .text-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .text-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #e0f7fa;
+    }
+    .donate-btn {
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #77A8BB;
+      background-color: transparent;
+      color: #77A8BB;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .donate-btn:hover {
+      background-color: #77A8BB;
+      color: #1F5C68;
+    }
+    .image-content {
+      flex: 1 1 400px;
+    }
+    .image-content img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .thank-you-message {
+      display: none;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      background-color: #2B7A78;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-content">
+      <h1>Your Spare Change Can Save Lives</h1>
+      <p>Your small gift can create lasting change—clean water, better health, and a brighter future.</p>
+      <button class="donate-btn" onclick="showThankYou()">Donate now →</button>
+      <div class="thank-you-message" id="thankYouMessage">
+        Thank you for your generous donation! Your support helps bring clean water to those in need. 💧
+      </div>
+    </div>
+    <div class="image-content">
+      <img src="hero-image.jpeg" alt="Hero image of children at a water source">
+    </div>
+  </div>
+  <script>
+    function showThankYou() {
+      const message = document.getElementById('thankYouMessage');
+      message.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
